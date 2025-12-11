@@ -43,4 +43,11 @@ Print (df, "\n" "\n")
 df["Nombre de G"] = df["Séquence"].str.count("G")
 print("===== Nombre de G ajoutés =====")
 print(df, "\n" "\n")
-
+#7) Calculer l'écart type du Pourcentage GC et de la Longueur des Séquence
+print("*******Calcul de l'écart type*******") 
+écart_type_GC = df["Pourcentage GC"].std()
+écart_type_Longueur = df["Longueur"].std()
+print(f"écart type du Pourcentagede GC : {écart_type_GC:.3f}%") 
+#8) Sauvegarde et chargement des données avec panda
+#Sauvegarder le DataFrame dans un fichier CSV
+df.to_csv("tableau_Séquence.csv", index=False)
