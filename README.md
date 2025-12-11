@@ -20,3 +20,7 @@ print ("tableau des séquence Adn; ")
 Print (df) 
 #opération sur les tableaux 
 Print (" **************opération ***************") 
+#2) Sélectionner la colonne "Longueur"
+Longueur = df[["Longueur"]]
+print(Longueur, "\n" "\n")
+
