@@ -1,23 +1,27 @@
-
 #Pandas OUMANSOUR SABAH M1 (Microbiologie Fondamentale)
 #for biologie Master Tlemcen...11/12/2025
 #Chef du projet: OUMANSOUR SABAH
 #Membres de l'équipe:
 #Yaiche rania imane
 #Youbi Imene 
+
 #PROJET D'ANALYSE DE SÉQUENCES ADN
-import pands as pd 
-#données: séquence adn, langeur, pourcentage de GC
-Data=[
-"séquence":[" ATGCGTACGTA "," GCTAGCTAGGCC "," ATGCGTACGTA ","TACGATCGTA"," ATGAAAGGCTT", "CGTACGTAGC"," TTAACCGGAT "] 
-" longueur ":[12,12,10,11,10,10]
-" pourcentage "[50,66.67,58.33,40,45.45,60,50]
-#création d'un data frame(tableau pands) 
-df=pd. Data frame (data) 
-Print (" ****************création et affichage *****************") 
-#affichage du tableau 
-print ("tableau des séquence Adn; ") 
-Print (df) 
+
+import pandas as pd 
+
+# Données : Séquences ADN, Longueur, Pourcentage de GC
+data = {
+    "Séquence": ["ATGCGTACGTA", "GCTAGCTAGGCC", "ATGCGCGTAAGT", "TACGATCGTA", "ATGAAAGGCTT", "CGTACGTAGC", "TTAACCGGAT"],
+    "Longueur": [11, 12, 12, 10, 11, 10, 10],
+    "Pourcentage GC": [50, 66.67, 58.33, 40, 45.45, 60, 50]
+}
+#1) Création d'un DataFrame (tableau pandas)
+df = pd.DataFrame(data)
+print("**************** Creation et affichage *****************")
+# Affichage du tableau
+print("Tableau des séquences ADN :", "\n" "\n")
+print(df, "\n" "\n")
+
 #opération sur les tableaux 
 Print (" **************opération ***************") 
 #2) Sélectionner la colonne "Longueur"
@@ -48,6 +52,7 @@ print("*******Calcul de l'écart type*******")
 écart_type_GC = df["Pourcentage GC"].std()
 écart_type_Longueur = df["Longueur"].std()
 print(f"écart type du Pourcentagede GC : {écart_type_GC:.3f}%") 
-#8) Sauvegarde et chargement des données avec panda
-# Sauvgarder le DataFrame dans un fichier CSV
-df.to_csv("tableau _séquance.csv"), indexFalse)
+#8)Sauvegarde et chargement des données avec panda
+#Sauvegarder le DataFrame dans un fichier CSV
+df.to_csv("tableau_Séquence.csv", index=False)
+
