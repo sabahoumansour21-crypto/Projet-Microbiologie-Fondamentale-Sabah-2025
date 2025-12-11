@@ -48,6 +48,3 @@ print("*******Calcul de l'écart type*******")
 écart_type_GC = df["Pourcentage GC"].std()
 écart_type_Longueur = df["Longueur"].std()
 print(f"écart type du Pourcentagede GC : {écart_type_GC:.3f}%") 
-#8) Sauvegarde et chargement des données avec panda
-#Sauvegarder le DataFrame dans un fichier CSV
-df.to_csv("tableau_Séquence.csv", index=False)
