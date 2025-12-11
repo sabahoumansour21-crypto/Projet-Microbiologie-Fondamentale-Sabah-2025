@@ -5,6 +5,7 @@
 #Yaiche rania imane
 #Youbi Imene 
 #PROJET D'ANALYSE DE SÉQUENCES ADN
+
 import pandas as pd 
 
 # Données : Séquences ADN, Longueur, Pourcentage de GC
@@ -63,3 +64,4 @@ print( "\n" "\n")
 #8)Sauvegarde et chargement des données avec panda
 #Sauvegarder le DataFrame dans un fichier CSV
 df.to_csv("tableau_Séquence.csv", index=False)
+print( "\n" "\n")
